@@ -1,0 +1,17 @@
+FROM node:18-alpine
+WORKDIR /usr/src/app/my-app
+COPY . ./
+
+RUN npm install --only=dev
+
+ARG REACT_APP_HTTP_URL
+
+ENV REACT_APP_HTTP_URL $REACT_APP_HTTP_URL
+
+ARG REACT_APP_WS_URL
+
+ENV REACT_APP_WS_URL $REACT_APP_WS_URL
+
+EXPOSE 3000
+
+CMD ["npm", "start"]

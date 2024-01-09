@@ -1,0 +1,8 @@
+extractor/.env
+extractor/.idea
+.idea
+api/.idea
+api/.env
+models
+client/node_modules
+.env
